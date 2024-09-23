@@ -137,6 +137,9 @@ var _default2 = {
       this._editorMounted(this.editor); //编辑器初始化后
 
     },
+    setLanguage: function setLanguage() {
+      monaco.editor.setModelLanguage(this.editor.getModel(), this.language);
+    },
     _getEditor: function _getEditor() {
       if (!this.editor) return null;
       return this.diffEditor ? this.editor.modifiedEditor : this.editor;
